@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
+	<meta name="author" content="Umukoro">
+	<meta name="keywords" content="Umukoro, bootstrap, web ui kit, dashboard template, admin template">
+
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<title>Inbox | Umukoro.rw</title>
+
+	<link href="/css/app.css" rel="stylesheet">
+
+	<link href="/css/chatstyle.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		
+		<!--{{>admin_asider}} -->
+
+		<!--            CONTROL ASIDER HERE           -->
+
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="/admin/dashboard">
+          <span class="align-middle">Umukoro</span>
+        </a>
+
+				<ul class="sidebar-nav">
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/dashboard">
+              <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/orders">
+              <i class="align-middle" data-feather="package"></i> <span class="align-middle">Orders</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="/admin/inbox">
+              <i class="align-middle" data-feather="inbox"></i> <span class="align-middle">Inbox</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/users">
+              <i class="align-middle" data-feather="users"></i> <span class="align-middle">Users</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/finance">
+              <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Finance</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/notifications">
+              <i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/settings">
+              <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+            </a>
+					</li>
+				</ul>
+
+				<div class="sidebar-cta">
+					<ul class="sidebar-nav">
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="#">
+	              <span class="align-middle">Version 001.01.01</span>
+	            </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!--            END OF  ASIDER HERE           -->
+
+		<div class="main">
+			
+			{{>admin_nav_bar}}
+
+			<main class="content">
+				<div class="container-fluid p-0">
+					<div class="row mb-2 mb-xl-3">
+						<div class="col-auto d-none d-sm-block">
+							<h3><strong>Inbox</strong></h3>
+						</div>
+
+						<div class="col-auto ml-auto text-right mt-n1">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+									<li class="breadcrumb-item"><a href="/admin/dashboard">Dashboards</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Inbox</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4" style="overflow-y: scroll; height: 500px">
+							<div class="card-header">
+								<form class="form-inline d-none d-sm-inline-block text-center">
+									<div class="input-group input-group-navbar">
+										<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+										<div class="input-group-append">
+											<button class="btn" type="button">
+				                <i class="align-middle" data-feather="search"></i>
+				              </button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="list-group list-group-flush" role="tablist">
+
+								<hr class="my-0" />
+								<a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+									<div class="row no-gutters align-items-center">
+										<div class="col-2">
+											<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+										</div>
+										<div class="col-10 pl-2">
+											<div class="text-dark">{{user.fname}} {{user.lname}}</div>
+											<div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
+											<div class="text-muted small mt-1">15m ago</div>
+										</div>
+									</div>
+								</a>
+								<a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+									<div class="row no-gutters align-items-center">
+										<div class="col-2">
+											<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+										</div>
+										<div class="col-10 pl-2">
+											<div class="text-dark">{{user.fname}} {{user.lname}}</div>
+											<div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
+											<div class="text-muted small mt-1">15m ago</div>
+										</div>
+									</div>
+								</a>
+								<a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+									<div class="row no-gutters align-items-center">
+										<div class="col-2">
+											<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+										</div>
+										<div class="col-10 pl-2">
+											<div class="text-dark">{{user.fname}} {{user.lname}}</div>
+											<div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
+											<div class="text-muted small mt-1">15m ago</div>
+										</div>
+									</div>
+								</a>
+								<a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+									<div class="row no-gutters align-items-center">
+										<div class="col-2">
+											<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="William Harris">
+										</div>
+										<div class="col-10 pl-2">
+											<div class="text-dark">Emmy Disc Jocker</div>
+											<div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
+											<div class="text-muted small mt-1">2h ago</div>
+										</div>
+									</div>
+								</a>
+								<a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+									<div class="row no-gutters align-items-center">
+										<div class="col-2">
+											<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+										</div>
+										<div class="col-10 pl-2">
+											<div class="text-dark">Emmy Disc Jocker</div>
+											<div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
+											<div class="text-muted small mt-1">4h ago</div>
+										</div>
+									</div>
+								</a>
+								<a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
+									<div class="row no-gutters align-items-center">
+										<div class="col-2">
+											<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+										</div>
+										<div class="col-10 pl-2">
+											<div class="text-dark">Emmy Disc Jocker</div>
+											<div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
+											<div class="text-muted small mt-1">5h ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-8">
+							<div class="card bg-light py-md-3 border"  style="height: 500px; padding-top: 0px">
+								<div class="msg_history">
+										<div class="incoming_msg">
+											<div class="incoming_msg_img">
+												<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+											</div>
+											<div class="received_msg">
+												<div class="received_withd_msg">
+													<p>Test which is a new approach to have all
+														solutions</p>
+													<span class="time_date"> 11:01 AM    |    June 9</span></div>
+											</div>
+										</div>
+
+										<div class="outgoing_msg">
+											<div class="sent_msg">
+												<p>Test which is a new approach to have all
+													solutions</p>
+												<span class="time_date"> 11:01 AM    |    June 9</span> </div>
+										</div>
+
+
+										<div class="incoming_msg">
+											<div class="incoming_msg_img">
+												<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+											</div>
+											<div class="received_msg">
+												<div class="received_withd_msg">
+													<p>Test, which is a new approach to have</p>
+													<span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+											</div>
+										</div>
+
+										<div class="outgoing_msg">
+											<div class="sent_msg">
+												<p>Apollo University, Delhi, India Test</p>
+												<span class="time_date"> 11:01 AM    |    Today</span> </div>
+										</div>
+
+
+										<div class="incoming_msg">
+											<div class="incoming_msg_img">
+												<img src="{{user.profile}}" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+											</div>
+											<div class="received_msg">
+												<div class="received_withd_msg">
+													<p>We work directly with our designers and suppliers,
+														and sell direct to you, which means quality, exclusive
+														products, at a price anyone can afford.</p>
+													<span class="time_date"> 11:01 AM    |    Today</span></div>
+											</div>
+										</div>
+										<!-- type message -->
+								</div>
+										<div class="type_msg">
+											<div class="input_msg_write">
+												<input type="text" class="write_msg" placeholder="Type a message" />
+												<button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" data-feather="send" aria-hidden="true"></i></button>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+				</div>
+
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-left">
+							<p class="mb-0">
+								<a href="/admin/dashboard" class="text-muted"><strong>Umukoro</strong></a> &copy;
+							</p>
+						</div>
+						<div class="col-6 text-right">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+
+
+	<script src="/js/vendor.js"></script>
+	<script src="/js/app.js"></script>
+
+
+</body>
+
+</html>

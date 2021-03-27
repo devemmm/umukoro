@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
+	<meta name="author" content="Umukoro">
+	<meta name="keywords" content="Umukoro, bootstrap, web ui kit, dashboard template, admin template">
+
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<title>Finance | Umukoro.rw</title>
+
+	<link href="/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		
+		<!--{{>admin_asider}} -->
+
+		<!--            CONTROL ASIDER HERE           -->
+
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="/admin/dashboard">
+          <span class="align-middle">Umukoro</span>
+        </a>
+
+				<ul class="sidebar-nav">
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/dashboard">
+              <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/orders">
+              <i class="align-middle" data-feather="package"></i> <span class="align-middle">Orders</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/inbox">
+              <i class="align-middle" data-feather="inbox"></i> <span class="align-middle">Inbox</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/users">
+              <i class="align-middle" data-feather="users"></i> <span class="align-middle">Users</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="/admin/finance">
+              <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Finance</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/notifications">
+              <i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/settings">
+              <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+            </a>
+					</li>
+				</ul>
+
+				<div class="sidebar-cta">
+					<ul class="sidebar-nav">
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="#">
+	              <span class="align-middle">Version 001.01.01</span>
+	            </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!--            END OF  ASIDER HERE           -->
+
+		<div class="main">
+			
+			{{>admin_nav_bar}}
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<div class="row mb-2 mb-xl-3">
+						<div class="col-auto d-none d-sm-block">
+							<h3><strong>Finance</strong> Dashboard</h3>
+						</div>
+
+						<div class="col-auto ml-auto text-right mt-n1">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+									<li class="breadcrumb-item"><a href="/admin/dashboard">Dashboards</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Finance</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-6 col-xxl-5 d-flex">
+							<div class="w-100">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title mb-4">Earned <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> in RWF</span></h5>
+												<h1 class="display-5 mt-1 mb-3">5,500</h1>
+												<div class="mb-1">
+													<span class="text-muted">Today</span>
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title mb-4">Balance <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> in RWF</span></h5>
+												<h1 class="display-5 mt-1 mb-3">28,600</h1>
+												<div class="mb-1">
+													<span class="text-muted">Avaliable</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title mb-4">Refunded <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> in RWF</span></h5>
+												<h1 class="display-5 mt-1 mb-3">6,000</h1>
+												<div class="mb-1">
+													<span class="text-muted">This week</span>
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title mb-4">Withdraw <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> in RWF</span></h5>
+												<h1 class="display-5 mt-1 mb-3">130,050</h1>
+												<div class="mb-1">
+													<span class="text-muted">Recent</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-xxl-7">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+
+									<h5 class="card-title mb-0">Recent Movement</h5>
+								</div>
+								<div class="card-body py-3">
+									<div class="chart chart-sm">
+										<canvas id="chartjs-dashboard-line"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="btn-group">
+										<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Sort By
+										</button>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="#">Latest</a>
+											<a class="dropdown-item" href="#">Oldest</a>
+											<a class="dropdown-item" href="#">Uncomfirmed</a>
+											<a class="dropdown-item" href="#">Confirmed</a>
+											<a class="dropdown-item" href="#">High Paid</a>
+											<a class="dropdown-item" href="#">Low Paid</a>
+										</div>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table mb-0">
+										<thead>
+											<tr>
+												<th scope="col">#</th>
+												<th scope="col">Username</th>
+												<th scope="col">Email</th>
+												<th scope="col">Phone</th>
+												<th scope="col">Academic <br>Level</th>
+												<th scope="col">Task Type</th>
+												<th scope="col">Amount <br>(RWF)</th>
+												<th scope="col">Update <br>Status </th>
+												<th scope="col">View <br>Invoice</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row"><a href="/admin/orders/details">0815110</a></th>
+												<td>Default</td>
+												<td>Default</td>
+												<td>07880000</td>
+												<td>Msc.</td>
+												<td>Default</td>
+												<td>3,500</td>
+												<td><a href="#"><span class="badge badge-danger">Confirm</span></a></td>
+												<td><a href="/admin/finance/invoice">View Invoice</a></td>
+											</tr>
+
+											{{#each task}}
+
+												<tr>
+													<th scope="row"><a href="/admin/orders/details">08150{{@index}}</a></th>
+													<td>{{moreinfo.username}}</td>
+													<td>{{moreinfo.email}}</td>
+													<td>{{moreinfo.phone}}</td>
+													<td>{{level}}</td>
+													<td>{{type}}</td>
+													<td>60,500</td>
+													<td><a href="#"><span class="badge badge-success">Started</span></a></td>
+													<td><a href="/admin/finance/invoice/{{_id}}">View Invoice</a></td>
+												</tr>
+
+											{{/each}}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-left">
+							<p class="mb-0">
+								<a href="/admin/dashboard" class="text-muted"><strong>Umukoro</strong></a> &copy;
+							</p>
+						</div>
+						<div class="col-6 text-right">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="/js/vendor.js"></script>
+	<script src="/js/app.js"></script>
+
+	<script>
+		$(function() {
+			var ctx = document.getElementById('chartjs-dashboard-line').getContext("2d");
+			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+			gradient.addColorStop(0, 'rgba(215, 227, 244, 1)');
+			gradient.addColorStop(1, 'rgba(215, 227, 244, 0)');
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: 'line',
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "Sales ($)",
+						fill: true,
+						backgroundColor: gradient,
+						borderColor: window.theme.primary,
+						data: [
+							2115,
+							1562,
+							1584,
+							1892,
+							1587,
+							1923,
+							2566,
+							2448,
+							2805,
+							3438,
+							2917,
+							3327
+						]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 1000
+							},
+							display: true,
+							borderDash: [3, 3],
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+
+</body>
+
+</html>

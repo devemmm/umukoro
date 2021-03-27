@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {{#if message}}
+      <div style="text-align: center" class="alert alert-{{message.type}}">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{message.intro}}</strong> {{message.message}}
+      </div>
+
+    {{/if}}
+    
+    <h1>404 PAGE NOT FOUND !!!</h1>
+</body>
+</html>

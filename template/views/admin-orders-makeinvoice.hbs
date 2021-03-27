@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
+	<meta name="author" content="Umukoro">
+	<meta name="keywords" content="Umukoro, bootstrap, web ui kit, dashboard template, admin template">
+
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<title>Make Invoice | Umukoro.rw</title>
+
+	<link href="/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		
+		<!--{{>admin_asider}} -->
+
+		<!--            CONTROL ASIDER HERE           -->
+
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="/admin/dashboard">
+          <span class="align-middle">Umukoro</span>
+        </a>
+
+				<ul class="sidebar-nav">
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/dashboard">
+              <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="/admin/orders">
+              <i class="align-middle" data-feather="package"></i> <span class="align-middle">Orders</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/inbox">
+              <i class="align-middle" data-feather="inbox"></i> <span class="align-middle">Inbox</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/users">
+              <i class="align-middle" data-feather="users"></i> <span class="align-middle">Users</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/finance">
+              <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Finance</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/notifications">
+              <i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/settings">
+              <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+            </a>
+					</li>
+				</ul>
+
+				<div class="sidebar-cta">
+					<ul class="sidebar-nav">
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="#">
+	              <span class="align-middle">Version 001.01.01</span>
+	            </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!--            END OF  ASIDER HERE           -->
+
+		<div class="main">
+			
+			{{>admin_nav_bar}}
+
+			<main class="content">
+				<div class="container-fluid p-0">
+					<div class="row mb-2 mb-xl-3">
+						<div class="col-auto d-none d-sm-block">
+							<h3><strong>Make</strong> Invoice</h3>
+						</div>
+
+						<div class="col-auto ml-auto text-right mt-n1">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+									<li class="breadcrumb-item"><a href="/admin/dashboard">Dashboards</a></li>
+									<li class="breadcrumb-item"><a href="/admin/orders">Orders</a></li>
+									<li class="breadcrumb-item"><a href="/admin/orders/details">Order Details</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Make Invoice</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-body">
+								<form>
+
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="inputCity">Service</label>
+											<select id="services" class="form-control">
+												<option selected>Choose...</option>
+												<option>Assignment</option>
+												<option>Research</option>
+												<option>Mentoring</option>
+												<option>Final Year Project</option>
+											</select>
+										</div>
+
+										<div class="form-group col-md-4">
+											<label for="AmountDue">Amount Due</label>
+											<input type="number" name="" value="" class="form-control" id="amountDue">
+										</div>
+										<div class="form-group col-md-2">
+											<label for="Discount">Discount</label>
+											<input type="number" name="" value="" class="form-control" id="discount">
+										</div>
+									</div>
+
+
+
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="AdditionalServices">Additional Services</label>
+											<select id="additional Services" class="form-control">
+												<option selected>Choose...</option>
+												<option>Hard Copies</option>
+												<option>Additional References</option>
+											</select>
+										</div>
+
+										<div class="form-group col-md-4">
+											<label for="AmountDue2">Amount Due</label>
+											<input type="number" name="" value="" class="form-control" id="amountDue2">
+										</div>
+										<div class="form-group col-md-2">
+											<label for="Delivery">Delivery</label>
+											<input type="number" name="" value="" class="form-control" id="delivery">
+										</div>
+
+									</div>
+
+
+									<div class="form-group">
+										<label for="noteToClient">Note to Client</label>
+										<textarea class="form-control" rows="4" placeholder="Please Note that ..."></textarea>
+									</div>
+
+
+									<div class="form-group">
+										<label class="custom-control custom-checkbox m-0">
+											<input type="checkbox" class="custom-control-input">
+											<span class="custom-control-label">Send me a copy</span>
+										</label>
+									</div>
+
+									<button type="submit" class="btn btn-primary">Send Invoice</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-left">
+							<p class="mb-0">
+								<a href="/admin/dashboard" class="text-muted"><strong>Umukoro</strong></a> &copy;
+							</p>
+						</div>
+						<div class="col-6 text-right">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="/js/vendor.js"></script>
+	<script src="/js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
+	<meta name="author" content="Umukoro">
+	<meta name="keywords" content="Umukoro, bootstrap, web ui kit, dashboard template, admin template">
+
+	<link rel="shortcut icon" href="images/icons/icon-48x48.png" />
+	<title>Documents | Umukoro.rw</title>
+
+	<link href="css/app.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="/home">
+          <span class="align-middle">Umukoro</span>
+        </a>
+
+				<ul class="sidebar-nav">
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/home">
+              <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/tasks">
+              <i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Tasks</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/inbox">
+              <i class="align-middle" data-feather="inbox"></i> <span class="align-middle">Inbox</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="/documents">
+              <i class="align-middle" data-feather="folder"></i> <span class="align-middle">Documents</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/notifications">
+              <i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notification</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/profile">
+              <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/settings">
+              <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+            </a>
+					</li>
+				</ul>
+
+				<div class="sidebar-cta">
+					<ul class="sidebar-nav">
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="#">
+	              <span class="align-middle">Version 001.01.01</span>
+	            </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+		<!--	User navbar	-->
+		{{>user_nav_bar}}
+
+
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<div class="row mb-3 mb-xl-3">
+						<div class="col-auto d-none d-sm-block">
+							<h3><strong>Documents</strong> Received</h3>
+						</div>
+
+						<div class="col-auto ml-auto text-right mt-n1">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+									<li class="breadcrumb-item"><a href="/home">My Dashboards</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Documents</li>
+								</ol>
+							</nav>
+						</div>
+
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<div class="btn-group">
+								<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Sort By
+								</button>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Latest</a>
+									<a class="dropdown-item" href="#">Oldest</a>
+								</div>
+							</div>
+
+							<form class="form-inline d-none d-sm-inline-block">
+								<div class="input-group input-group-navbar">
+									<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+									<div class="input-group-append">
+										<button class="btn" type="button">
+											<i class="align-middle" data-feather="search"></i>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="card-body">
+							<div class="row">
+										<div class="col-md-4">
+											<div class="card" style="background: #e6f2ff">
+												<div class="card-body" >
+													<h4><strong>Making the world a better  better place</strong></h4>
+													<p class="card-text">Assignment description in summary is here. Please download the zip file of the task.</p>
+													<a href="#" class="btn btn-primary"><i data-feather="download"></i> Download</a>
+												</div>
+											</div>
+										</div>
+										
+										{{#each tasks}}
+
+											<div class="col-md-4">
+												<div class="card" style="background: #e6f2ff">
+													<div class="card-body" >
+														<h4><strong>{{title}}</strong></h4>
+														<p class="card-text">Assignment description in summary is here. Please download the zip file of the task.</p>
+														<a href="{{file}}" class="btn btn-primary"><i data-feather="download"></i> Download</a>
+													</div>
+												</div>
+											</div>
+
+										{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+
+			<!-- foooter-->
+			{{>user_footer}}
+
+		</div>
+	</div>
+
+	<script src="js/vendor.js"></script>
+	<script src="js/app.js"></script>
+
+	<script>
+		$(function() {
+			var ctx = document.getElementById('chartjs-dashboard-line').getContext("2d");
+			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+			gradient.addColorStop(0, 'rgba(215, 227, 244, 1)');
+			gradient.addColorStop(1, 'rgba(215, 227, 244, 0)');
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: 'line',
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "Sales ($)",
+						fill: true,
+						backgroundColor: gradient,
+						borderColor: window.theme.primary,
+						data: [
+							2115,
+							1562,
+							1584,
+							1892,
+							1587,
+							1923,
+							2566,
+							2448,
+							2805,
+							3438,
+							2917,
+							3327
+						]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 1000
+							},
+							display: true,
+							borderDash: [3, 3],
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+
+</body>
+
+</html>

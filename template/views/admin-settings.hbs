@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
+	<meta name="author" content="Umukoro">
+	<meta name="keywords" content="Umukoro, bootstrap, web ui kit, dashboard template, admin template">
+
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<title>Settings | Umukoro.rw</title>
+
+	<link href="/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		
+		<!--{{>admin_asider}} -->
+
+		<!--            CONTROL ASIDER HERE           -->
+
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="/admin/dashboard">
+          <span class="align-middle">Umukoro</span>
+        </a>
+
+				<ul class="sidebar-nav">
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/dashboard">
+              <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/orders">
+              <i class="align-middle" data-feather="package"></i> <span class="align-middle">Orders</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/inbox">
+              <i class="align-middle" data-feather="inbox"></i> <span class="align-middle">Inbox</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/users">
+              <i class="align-middle" data-feather="users"></i> <span class="align-middle">Users</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/finance">
+              <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Finance</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/admin/notifications">
+              <i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notifications</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="/admin/settings">
+              <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+            </a>
+					</li>
+				</ul>
+
+				<div class="sidebar-cta">
+					<ul class="sidebar-nav">
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="#">
+	              <span class="align-middle">Version 001.01.01</span>
+	            </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!--            END OF  ASIDER HERE           -->
+
+		<div class="main">
+			
+			{{>admin_nav_bar}}
+
+			{{#if message}}
+			
+				<div style="text-align: center" class="alert alert-{{message.type}}">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<strong>{{message.intro}}</strong> {{message.message}}
+				</div>
+
+			{{/if}}
+
+			<main class="content">
+				<div class="container-fluid p-0">
+					<div class="row mb-2 mb-xl-3">
+
+						<div class="col-auto d-none d-sm-block">
+							<h3><strong>Settings</strong> Page</h3>
+						</div>
+
+						<div class="col-auto ml-auto text-right mt-n1">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+									<li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Settings</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="card">
+					      <div class="list-group list-group-flush" role="tablist">
+					        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account" role="tab">
+					          Profile
+					        </a>
+
+					        <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">
+					          Password
+					        </a>
+					      </div>
+					    </div>
+						</div>
+						<div class="col-md-8">
+							<div class="tab-content">
+					      <div class="tab-pane fade show active" id="account" role="tabpanel">
+
+					        <div class="card">
+					          <div class="card-header">
+
+					            <h5 class="card-title mb-0">Public info</h5>
+					          </div>
+					          <div class="card-body">
+
+					            <form>
+					              <div class="row">
+					                <div class="col-md-8">
+					                  <div class="form-group">
+					                    <label for="inputUsername">Username</label>
+					                    <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Username">
+					                  </div>
+					                  <div class="form-group">
+					                    <label for="inputEmail4">Email address</label>
+					                    <input type="text" class="form-control" id="inputEmail4" placeholder="example@email.abc">
+					                  </div>
+					                </div>
+
+					                <div class="col-md-4">
+					                  <div class="text-center">
+					                    <img alt="Charles Hall" src="{{user.profile}}" class="rounded-circle img-responsive mt-2" width="128" height="128" />
+					                    <div class="mt-2">
+					                      <span class="btn btn-primary"><i class="fas fa-upload"></i> Upload</span>
+					                    </div>
+					                    <small>For best results, use an image at least 128px by 128px in .jpg format</small>
+					                  </div>
+					                </div>
+					              </div>
+
+					              <button type="submit" class="btn btn-primary">Save changes</button>
+					            </form>
+
+					          </div>
+					        </div>
+
+					        <div class="card">
+					          <div class="card-header">
+
+					            <h5 class="card-title mb-0">Private info</h5>
+					          </div>
+					          <div class="card-body">
+					            <form method="POST">
+					              <div class="form-row">
+					                <div class="form-group col-md-6">
+					                  <label for="inputFirstName">First name</label>
+					                  <input type="text" name="fname" class="form-control" id="inputFirstName" placeholder="First name">
+					                </div>
+					                <div class="form-group col-md-6">
+					                  <label for="inputLastName">Last name</label>
+					                  <input type="text" name="lname" class="form-control" id="inputLastName" placeholder="Last name">
+					                </div>
+					              </div>
+
+					              <div class="form-row">
+					                <div class="form-group col-md-6">
+					                  <label for="inputPhoneNumber1">Phone</label>
+					                  <input type="text" name="phone" class="form-control" id="inputPhoneNumber1" placeholder="Phone">
+					                </div>
+					                <div class="form-group col-md-6">
+					                  <label for="inputPhoneNumber2">Phone 2</label>
+					                  <input type="text" name="phone2" class="form-control" id="inputPhoneNumber2" placeholder="Phone Recovery">
+					                </div>
+					              </div>
+
+					              <div class="form-group">
+					                <label for="inputAddress">Address</label>
+					                <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St" >
+					              </div>
+
+					              <div class="form-row">
+					                <div class="form-group col-md-6">
+					                  <label for="inputCity">City</label>
+					                  <input type="text" name="city" class="form-control" id="inputCity">
+					                </div>
+
+					                <div class="form-group col-md-4">
+					                  <label for="inputState">State</label>
+										<select id="inputState" name="nationality" class="form-control">
+											<option value="">Choose...</option>
+											<option value="Rwanda">Rwanda</option>
+											<option value="Burundi">Burundi</option>
+											<option value="Kenya">Kenya</option>
+											<option value="Tanzania">Tanzania</option>
+											<option value="Congo">Congo</option>
+										</select>
+					                </div>
+
+					                <div class="form-group col-md-2">
+					                  <label for="inputZip">Zip Code</label>
+					                  <input type="text" name="zipcode" class="form-control" id="inputZip" required>
+					                </div>
+
+					              </div>
+
+					              <button type="submit" class="btn btn-primary">Save changes</button>
+					            </form>
+
+					          </div>
+					        </div>
+
+
+
+					      </div>
+					      <div class="tab-pane fade" id="password" role="tabpanel">
+					        <div class="card">
+					          <div class="card-body">
+					            <h5 class="card-title">Password</h5>
+
+					            <form>
+					              <div class="form-group">
+					                <label for="inputPasswordCurrent">Current password</label>
+					                <input type="password" class="form-control" id="inputPasswordCurrent">
+					                <small><a href="#">Forgot your password?</a></small>
+					              </div>
+					              <div class="form-group">
+					                <label for="inputPasswordNew">New password</label>
+					                <input type="password" class="form-control" id="inputPasswordNew">
+					              </div>
+					              <div class="form-group">
+					                <label for="inputPasswordNew2">Verify password</label>
+					                <input type="password" class="form-control" id="inputPasswordNew2">
+					              </div>
+					              <button type="submit" class="btn btn-primary">Save changes</button>
+					            </form>
+
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-left">
+							<p class="mb-0">
+								<a href="/admin/dashboard" class="text-muted"><strong>Umukoro</strong></a> &copy;
+							</p>
+						</div>
+						<div class="col-6 text-right">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="/js/vendor.js"></script>
+	<script src="/js/app.js"></script>
+
+
+
+</body>
+
+</html>

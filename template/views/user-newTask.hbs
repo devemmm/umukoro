@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
+    <meta name="author" content="Umukoro">
+    <meta name="keywords" content="Umukoro, bootstrap, web ui kit, dashboard template, admin template">
+
+    <link rel="shortcut icon" href="images/icons/icon-48x48.png" />
+
+    <title>Make Invoice | Umukoro.rw</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+
+
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="/home">
+                    <span class="align-middle">Umukoro</span>
+                </a>
+
+                <ul class="sidebar-nav">
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/home">
+                            <i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  active">
+                        <a class="sidebar-link" href="/tasks">
+                            <i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Tasks</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/inbox">
+                            <i class="align-middle" data-feather="inbox"></i> <span class="align-middle">Inbox</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/documents">
+                            <i class="align-middle" data-feather="folder"></i> <span class="align-middle">Documents</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/notifications">
+                            <i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notification</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/profile">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="settings">
+                            <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="sidebar-cta">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="#">
+                                <span class="align-middle">Version 001.01.01</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!--	user navbar	-->
+        {{>user_nav_bar}} {{#if message}}
+        <div style="text-align: center" class="alert alert-{{message.type}}">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>{{message.intro}}</strong> {{message.message}}
+        </div>
+
+        {{/if}}
+
+        <main class="content">
+            <div class="container-fluid p-0">
+                <div class="row mb-2 mb-xl-3">
+                    <div class="col-auto d-none d-sm-block">
+                        <h3><strong>New</strong> Task</h3>
+                    </div>
+
+                    <div class="col-auto ml-auto text-right mt-n1">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+                                <li class="breadcrumb-item"><a href="/home">My Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="/tasks">Tasks</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">New Task</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="newTaskInput">
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputLevel">Academic level</label>
+                                        <select name="level" id="inputAcademicLevel" class="form-control" required>
+												<option selected>Choose...</option>
+												<option>High School</option>
+                                                <option>Bachelor's level</option>
+                                                <option>Masters Degree</option>
+                                                <option>Others</option>
+											</select>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label for="inputTask">Type of task</label>
+                                        <select name="type" id="inputTaskType" class="form-control" required>
+												<option selected>Choose...</option>
+												<option>Assignment</option>
+                                                <option>Creative writing</option>
+                                                <option>Debbuging</option>
+                                                <option>Presentation</option>
+                                                <option>Proofreading</option>
+                                                <option>Final Year Project</option>
+                                                <option>Others</option>
+											</select>
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="subject">Subject</label>
+                                        <select name="subject" id="inputSubject" class="form-control" required>
+												<option selected>Choose...</option>
+												<option>Computer Science</option>
+                                                <option>Business Studies</option>
+                                                <option>Maths and Sciences</option>
+                                                <option>Humanities and Arts</option>
+                                                <option>Others</option>
+											</select>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="inputTitle">Paper title</label>
+                                        <input type="text" class="form-control" name="title" id="inputTitle" placeholder="Page title" required>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputDeadline">Deadline</label>
+                                        <input type="date" class="form-control" name="deadline" id="inputDeadline" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="additionalInfo">Task Description</label>
+                                    <textarea class="form-control" name="details" id="inputDescription" rows="6" placeholder="My task is about..." required></textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label w-100">Add a file</label>
+                                        <input type="file" name="file" id="inputFile" required>
+                                        <small class="form-text text-muted">Please make sure it doesn't exceed 5MB.</small>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <input type="checkbox" name="token" id="inputToken" value="{{token}}" required> I agree the <a href="/termsAndConditions">Terms of use</a> and the <a href="/privacyPolicy">Privacy Policy</a> of Umukoro.rw
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="custom-control custom-checkbox m-0">
+					              <input type="checkbox" class="custom-control-input">
+					              <span class="custom-control-label">Send me hard copies</span>
+					            </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Confirm Task</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- foooter-->
+        {{>user_footer}}
+
+
+    </div>
+    </div>
+
+    <script>
+        const $newTaskForm = document.getElementById('newTaskInput')
+        const $inputAcademicLevel = document.getElementById('inputAcademicLevel')
+        const $inputTaskType = document.getElementById('inputTaskType')
+        const $inputSubject = document.getElementById('inputSubject')
+        const $inputTitle = document.getElementById('inputTitle')
+        const $inputDeadline = document.getElementById('inputDeadline')
+        const $inputDescription = document.getElementById('inputDescription')
+        const $inputFile = document.getElementById('inputFile')
+        const $inputToken = document.getElementById('inputToken')
+
+
+
+        $newTaskForm.addEventListener('submit', e=>{
+            e.preventDefault()
+
+            const level = $inputAcademicLevel.value
+            const type = $inputTaskType.value
+            const subject  = $inputSubject.value
+            const title = $inputTitle.value
+            const deadline = $inputDeadline.value
+            const description = $inputDescription.value
+            const token = $inputToken.value
+
+            const formData = new FormData()
+            formData.append('type', type)
+            formData.append('level', level)
+            formData.append('subject', subject)
+            formData.append('title', title)
+            formData.append('deadline', deadline)
+            formData.append('details', description)
+            formData.append('file', $inputFile.files[0])
+
+            const endpoint = 'http://umukoro-api.herokuapp.com/tasks'
+
+
+            fetch(endpoint, {
+                method: "post",
+                headers: {
+                    Authorization: token
+                },
+                body : formData
+
+            })
+            .then((resp) => {
+                    return resp.json()
+                })
+            .then((data)=>{
+                return window.location.replace('/home')
+                })
+            .catch((err)=>{
+                window.location.replace('/404Page')
+                })
+            
+
+
+        })
+    </script>
+
+    <script src="js/vendor.js"></script>
+
+</body>
+
+</html>
