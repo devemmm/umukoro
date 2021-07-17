@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<link rel="stylesheet" href="/DataTables/datatables.min.css" type="text/css">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -194,12 +195,23 @@
 													<td>{{deadline}}</td>
 													<td><span class="badge badge-secondary">Unpaid</span></td></td>
 													<td><a href="/task/{{_id}}">Remove Task</a> </td>
+													
 												</tr>
 
 												{{/each}}
 											</tbody>
 										</table>
 									</div>
+									<table id="taskTable">
+										<thead>
+											<th>#Task ID</th>
+											<th>Task Type</th>
+											<th>Subject</th>
+											<th>Deadline</th>
+											<th>Status</th>
+											<th>Remove</th>
+										</thead>
+									</table>
 								</div>
 							</div>
 						</div>
@@ -277,6 +289,51 @@
 			});
 		});
 	</script>
+				<script src="/jquery/jquery.js" type="text/javascript"></script>
+                <script src="/DataTables/datatables.min.js" type="text/javascript"></script>
+                <script>
+                    function displayAllTicket() {
+                        $('#taskTable').dataTable().fnDestroy();
+                        $.ajax({
+                            url: "http://localhost:3001/alltasks-apis",
+                            type: 'GET',
+                            dataType: 'JSON',
+                            success: function(data) {
+                                $('#taskTable').dataTable({
+                                    "aaData": data,
+                                    "scrollx": true,
+                                    "aoColumns": [
+                                        {"sTitle": "#Task ID", mData: "_id"},
+                                        {"sTitle": "Task Type", mData: "type"},
+										{"sTitle": "Subject", mData: "subject"},
+										{"sTitle": "Deadline", mData: "deadline"},
+										{"sTitle": "Status", mData: "status"},
+										{
+											"sTitle": "Remove", 
+											"mData": "_id",
+											"render": function(mData){
+												return '<button  onclick="removeTask(`608fb2cf3aba6607838434a7`)" style="color:#22779c;">Remove</button>';
+											}
+										}
+                                    ]
+                                });
+                            }
+                        });
+                    }
+                    displayAllTicket();
+					function removeTask(_id){
+						$.ajax({
+							type: 'POST',
+							url:'http://localhost:3000/helpajax/id='+_id,
+							{{!-- data:{"id": "608ed9c2411364194e8a0932"}, --}}
+
+							success:function(){
+								displayAllTicket();
+							}
+						});
+
+					}
+                </script>
 
 </body>
 

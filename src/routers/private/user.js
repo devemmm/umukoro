@@ -1,4 +1,5 @@
 const express = require('express')
+const request = require('request')
 const { requireAuthorization } = require('../../middleware/requireAuthorization')
 const {
     home,
@@ -50,6 +51,26 @@ router.get('/settings', requireAuthorization, settings)
 router.post('/settings', requireAuthorization, updateProfile)
 
 router.get('/logout', requireAuthorization, logout)
+
+router.post('/helpajax/id=:id', (req,res)=>{
+
+    try {
+        request({
+            url: `${process.env.UMUKORO_API}/ajaxdeletetask/id=`+req.params.id,
+            method: 'POST',
+            headers: {
+                Authorization: req.token
+            },
+            json: true
+        }, (err, response, body) => {
+
+            
+        })
+    } catch (error) {
+        // return res.redirect('/404Page')
+    }
+    res.send({id:req.params.id});
+})
 
 
 router.get('*', page404)
